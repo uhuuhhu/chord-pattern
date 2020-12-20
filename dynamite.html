@@ -17,20 +17,30 @@
 
 div {
   width: 500px;
-  height: 600px;
+  height: 400px;
     line-height: 50px;
 }
 
 .rotated {
   transform: rotate3d(0, 1, 0, 50deg);
-  background-color: #f9f9fa;
+  background-color: transparent;
     padding: 50 30 30 100;
 }
         
+        .middle {
+            background-color: white;
+        }
+        .rotated2 {
+  transform: rotate3d(0, 1, 0, 50deg);
+  background-color: transparent;
+    padding: 50 30 30 100;
+            width: 500px;
+  height: 100px;
+}
+        
+        
         
 </style>
-    
-    
 
 </head>
 
@@ -41,7 +51,7 @@ div {
 
     <table style="font-family: 'Press Start 2P', cursive;">
         <tr>
-            <td height=50px></td>
+            <td height=10px></td>
         </tr>
         <tr><td width=100px></td>
             <td style="vertical-align: top;"><br><br>
@@ -49,15 +59,21 @@ div {
                     <u>NAME</u> BTS
                     <br><u>TITLE</u> DYNAMITE
                     <br><u>CHORD PATTERN</u>
-                    <br><img src="pic/p-dynamite.png" width=300px;>
-                    <br><br>
-                    <br><br>
-                    <a href="index.html"><img src="pic/door.png" width="40px"></a>
+                    <br><img src="pic/p-dynamite.png" width=300px height=200px>
+                    <br><div id="box-container">
+		<div id="menu" style="background-color: transparent">
+			<div><span style="background-color: transparent;">
+	<u>MV STILL CUT ▼</u></span>
+	<p class="arrow_box">
+		<img src="pic/still/12%20dynamite.jpg" width=300px>
+	</p>
+            </div></div></div>
+                   
                 </div>
             </td>
             
             
-            <td width=600px height=800px>
+            <td width=600px height=600px style="vertical-align: middle;">
                 <center><div>
                     <img src="pic/dyna/01.png" width="600" height="600"
                     class="reel"
@@ -71,6 +87,22 @@ div {
                 </div></center>
             </td>
 
+        </tr>
+        <tr>
+            <td> </td>
+            <td>
+                <div class="rotated2">
+                     <a href="index.html"><img src="pic/door.png" width="40px"></a></div>
+                   <br>
+
+                    
+                
+                
+                
+           
+            
+            </td>
+        
         </tr>
                         
 

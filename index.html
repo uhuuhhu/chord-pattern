@@ -1,32 +1,51 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="UTF-8">
-        <title>CHORD PATTERN PROJECT</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-    <style>
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-        
-        
-</style>
-    
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script> <script src="http://code.vostrel.cz/jquery.reel.js"></script>
+  <style type="text/css">
+    #zoomtext {
+      transform: scale(1);
+      transition: transform 0.2s ease-in-out;
+    }
+      
+      button.please {
+          position:relative;
+          z-index:2;
+          
+  background-color: transparent; /* Green */
+  border: none;
+  color: black;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+          border-radius: 8px;
 
+  border: 0px solid #555555;
+}
+
+.please:hover {
+  background-color: #555555;
+  color: white;
+    opacity: 0.1;
+}
+      
+  </style>
 </head>
 
-
-<body style="margin-top: 50px;">
+<body><center>
+  <button id="zoomOut" class="please">-</button>
+  <button id="zoomIn" class="please">+</button>
+  
+    <table>
     
-    <center>
+    </table>
+    <article>
+    <section id="zoomtext">
+      <img src="main.jpg" width=1500 usemap="#chord">
 
-    <table style="font-family: 'Press Start 2P', cursive;">
-        
-           
-         
-        
-        <img src="pic/allmain.png"  usemap="#chord">
-
-<map name="chord"  id="chord">
+<map name="chord" id="chord">
 
 <area shape="poly" coords="666, 188, 668, 126, 698, 78, 745, 53, 784, 48, 830, 54, 877, 89, 898, 132, 900, 186, 823, 215, 812, 227, 750, 226, 751, 216, 743, 213" href="dynamite.html" onfocus="this.blur();">
 <area shape="rec" coords="560, 378, 764, 446" href="hip.html" onfocus="this.blur();">
@@ -39,12 +58,25 @@
 <area shape="poly" coords="1109, 98, 1239, 99, 1258, 115, 1258, 126, 1234, 145, 1218, 146, 1217, 181, 1210, 181, 1208, 487, 1130, 449, 1131, 181, 1124, 181, 1125, 140, 1108, 148, 1099, 147, 1085, 132, 1085, 114" href="psycho.html" onfocus="this.blur();">
 <area shape="poly" coords="1018, 663, 1021, 677, 1149, 694, 1153, 726, 1189, 728, 1189, 647, 1152, 645, 1152, 677, 1025, 662" href="lovesick.html" onfocus="this.blur();">
 <area shape="poly" coords="1016, 435, 1069, 427, 1191, 476, 1270, 529, 1308, 549, 1360, 598, 1362, 626, 1333, 627, 1266, 565, 1229, 610, 1221, 610, 1217, 545, 1141, 582, 1129, 572, 993, 482, 1014, 445" href="moremore.html" onfocus="this.blur();">
-            
-                        
+    </section>
+  </article>
 
-    </table>
-        </center>
-        
+  <script>
+    var zoom = 1;
+    var zoomStep = 0.2;
+
+    document.getElementById("zoomIn").addEventListener("click", function() {
+      zoom += zoomStep;
+      document.getElementById("zoomtext").style.transform = "scale(" + zoom + ")";
+    });
+    document.getElementById("zoomOut").addEventListener("click", function() {
+      if (zoom > zoomStep) {
+        zoom -= zoomStep;
+        document.getElementById("zoomtext").style.transform = "scale(" + zoom + ")";
+      }
+    });
+  </script>
+</center>
 </body>
 
 </html>

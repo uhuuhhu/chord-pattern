@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    
+        <title>CHORD PATTERN PROJECT</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="jquery-1.10.2.min.js"></script>
+    <script src="jquery.reel-bundle.js">
+    </script>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@font-face {
+     font-family: 'DungGeunMo';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+
+        
+        body {
+  perspective: 800px;
+}
+
+div {
+  width: 500px;
+  height: 600px;
+    line-height: 25px;
+}
+
+.rotated {
+  transform: rotate3d(0, 1, 0, 40deg);
+  background-color: #f9f9fa;
+    padding: 50 30 30 100;
+}
+        
+        .middle {
+            background-color: white;
+        }
+        
+        
+</style>
+
+</head>
+
+
+<body class="first" style="vertical-align: middle;">
+    
+   
+
+    <table style="font-family: 'DungGeunMo', sans-serif;">
+        <tr>
+            <td height=50px></td>
+        </tr>
+        <tr><td width=100px></td>
+            <td style="vertical-align: top;"><br><br>
+                <div class="rotated">
+                    <u>대상</u> 2020년 멜론 월간 댄스 차트 1위 곡들<br><br>
+                    <u>방법</u> 1. 음악 코드별로 색상을 부여
+                    <br>　　 　 <img src="chordchart.png" width=300px>
+                    <br>　　 2. 곡들의 코드를 분석,
+                    <br>　　 　 각 곡들에 해당하는 패턴을 생성
+                    <br>　　 3. 구글에 '곡명 + mv still cut image' 검색하고
+                    <br>　　 　 검색결과로 나온 뮤비 장면 한 가지를 선정,
+                    <br>　　 　 그 장면에 등장하는 오브젝트 하나를
+                    <br>　　 　 3D 그래픽으로 제작
+                    <br>　　 4. 각 곡의 오브젝트에 해당 곡의 패턴을 적용하여
+                    <br>　　 　 360도 이미지로 렌더링
+                    <br><br><font style="font-size:11px; line-height: 15px;">
+                        copyright (c) EUNSOO JUNG
+                    <br>　　　　　　　uhuuhhu@gmail.com
+                    <br>　　　　　　　<a href="http://www.instagram.com/o_o2.nu3" target="_blank">instagram @ o_o2.nu3</a></font>
+                    <br><br>
+                    <a href="index.html"><img src="pic/door.png" width="40px"></a>
+                    
+                </div>
+            </td>
+            
+            
+            <td width=600px height=800px>
+                <center><div>
+                    <img src="pic/box/01.png" width="600" height="600"
+                    class="reel"
+                    id="image"
+                    data-images="pic/box/##.png"
+                    data-footage="18"
+                    data-cw="true"
+                    data-orbital="3"
+                    data-inversed="true"
+                    data-speed="0.3">
+                </div></center>
+            </td>
+
+        </tr>
+                        
+
+    </table>
+        
+</body>
+
+</html>
